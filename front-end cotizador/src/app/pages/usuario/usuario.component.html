@@ -1,0 +1,53 @@
+<div class="content" role="main">
+
+    <div class="gridImg">
+        <img width="350px" height="350px" src="./../../../assets/images/moto0{{ item.id }}.webp"/>
+    </div>
+    
+    <div class="gridTitulo">
+        <h1> {{ item.titulo }} </h1>
+    </div>
+    <div class="gridContent">
+        <div class="miniInfo">
+            <span> Marca: {{ item.marca }} </span>
+            <span> Vercion: {{ item.version }} </span>
+            <span> Color: {{ item.color }} </span>
+        </div>
+        <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+            <div>
+                <label for="precio"> Precio sin IVA </label>
+                <input id="precio" type="text" formControlName="costo_sin_iva">
+            </div>
+            <div>
+                <label for="cosIva"> Costo con IVA </label>
+                <input id="cosIva" type="text" formControlName="costo_con_iva">
+            </div>
+            <div>
+                <label for="enganche"> Monto de Enganche </label>
+                <input id="enganche" type="text" formControlName="monto_enganche">
+            </div>
+            <div>
+                <label for="tasCre"> Tasa de Credito </label>
+                <input id="tasCre" type="text" formControlName="tasa_credito">
+            </div>
+
+            <button class="button" type="submit"> Apartar </button>
+
+        </form>
+
+        <!--div class="card">
+            <span> {{'XYZ'}} </span>
+            <img width="190px" height="190px" src="./../../../assets/images/moto0{{'1'}}.webp"/>
+            <span> Marca: {{'XYZ'}} </span>
+            <span> Precio: {{'XYZ'}} </span>
+            <span> Vercion: {{'XYZ'}} </span>
+            <span> Color: {{'XYZ'}} </span>
+            <span class="alignEnd"> Ver Detalle > </span>
+            
+        </div-->
+
+
+    </div>
+  
+    <footer> Realizado por: Luis Enrique Perez Rendon </footer>
+</div>

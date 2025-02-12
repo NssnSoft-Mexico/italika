@@ -1,0 +1,22 @@
+<div class="content" role="main">
+
+    <h1> Motos en Venta </h1>
+
+    <div class="card-container">
+
+        <div class="card" *ngFor="let datos of items" (click)="onClick(datos)">
+            <span> {{ datos.titulo }} </span>
+            <img width="190px" height="190px" src="./../../../assets/images/moto0{{ datos.id }}.webp"/>
+            <span> Marca: {{ datos.marca }} </span>
+            <span> Precio: ${{ datos.precio }} </span>
+            <span> Vercion: {{ datos.version }} </span>
+            <span> Color: {{ datos.color }} </span>
+            <span class="alignEnd"> Cotizar > </span>
+            
+        </div>
+
+
+    </div>
+  
+    <footer> Realizado por: Luis Enrique Perez Rendon </footer>
+</div>
