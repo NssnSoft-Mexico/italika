@@ -1,0 +1,26 @@
+CREATE TABLE interesado (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    celular VARCHAR(15) NOT NULL,
+    correo VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE cotizacion (
+    id SERIAL PRIMARY KEY,
+    fecha_cotizacion DATE NOT NULL,
+    costo_sin_iva DECIMAL(10, 2) NOT NULL,
+    costo_con_iva DECIMAL(10, 2) NOT NULL,
+    costo_total DECIMAL(10, 2) NOT NULL,
+    monto_enganche DECIMAL(10, 2) NOT NULL,
+    tasa_credito INT NOT NULL
+);
+
+CREATE TABLE inventario (
+    id SERIAL PRIMARY KEY,
+    marca VARCHAR(200) NOT NULL,
+    precio DECIMAL(10, 2) NOT NULL,
+    version VARCHAR(200) NOT NULL,
+    color VARCHAR(200) NOT NULL,
+    inventario_data INT NOT NULL,
+    titulo VARCHAR(300)
+);
